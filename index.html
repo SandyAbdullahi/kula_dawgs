@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kula Dawgs – Gourmet Hotdogs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --yellow: #ffcc00;
+      --green: #1e7c3e;
+      --bg: #0d0d0d;
+      --card: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 85vh;
+      padding: 0 5%;
+      background: url("hero-4.png") center/cover no-repeat;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 520px;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw + 1rem, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 15px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .btn.glovo {
+      background: var(--yellow);
+      color: #000;
+    }
+    .btn.uber {
+      background: var(--green);
+      color: #fff;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 70px 5%;
+    }
+    .section-title {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    /* ---------- MENU ---------- */
+    .menu-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+    }
+    .menu-card {
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      padding-bottom: 25px;
+    }
+    .menu-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+    .menu-card h3 {
+      margin: 18px 0 8px;
+      font-size: 1.1rem;
+    }
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--yellow);
+      color: #000;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      border-radius: 14px;
+      font-weight: 600;
+    }
+
+    /* ---------- HOW IT WORKS ---------- */
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .step {
+      text-align: center;
+      max-width: 180px;
+    }
+    .icon {
+      width: 70px;
+      height: 70px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.8rem;
+    }
+
+    /* ---------- REVIEWS ---------- */
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+    .review {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 14px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      background: #121212;
+      padding: 40px 5%;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .hero {
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-content {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Gourmet hotdogs<br />delivered to your door</h1>
+      <p>Only on Glovo and Uber Eats</p>
+      <div class="cta-buttons">
+        <button class="btn glovo">Order on Glovo</button>
+        <button class="btn uber">Order on Uber Eats</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section>
+    <h2 class="section-title">Menu Highlights</h2>
+    <div class="menu-list">
+      <div class="menu-card">
+        <span class="badge" style="display:none"></span>
+        <img src="mango tango.png" alt="Classic Dawg" />
+        <h3>Classic Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+      <div class="menu-card">
+        <span class="badge">Bestseller</span>
+        <img src="bbq dawg.png" alt="Nairobi Heat" />
+        <h3>Nairobi Heat</h3>
+        <p>500 Ksh</p>
+      </div>
+      <div class="menu-card">
+        <span class="badge" style="display:none"></span>
+        <img src="loaded fries.png" alt="Fries Loaded" />
+        <h3>Fries Loaded</h3>
+        <p>300 Ksh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="icon">🌭</div>
+        <p>Pick your dawg</p>
+      </div>
+      <div class="step">
+        <div class="icon">📦</div>
+        <p>Order on Glovo/Uber</p>
+      </div>
+      <div class="step">
+        <div class="icon">⏱️</div>
+        <p>Get it hot and fresh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section>
+    <h2 class="section-title">Reviews</h2>
+    <div class="reviews">
+      <div class="review">⭐⭐⭐⭐⭐ Tasty hotdogs! Will order again.</div>
+      <div class="review">⭐⭐⭐⭐⭐ Absolutely amazing flavors and fast delivery.</div>
+      <div class="review">⭐⭐⭐⭐⭐ Nairobi Heat is 🔥🔥🔥</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Kula Dawgs. Delivering through Glovo and Uber Eats only.
+  </footer>
+</body>
+</html>
