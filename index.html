@@ -34,7 +34,7 @@
       justify-content: flex-start;
       min-height: 85vh;
       padding: 0 5%;
-      background: url("hero-4.png") center/cover no-repeat;
+      background: url("hero-3.png") center/cover no-repeat;
     }
     .hero::after {
       content: "";
@@ -44,7 +44,7 @@
     }
     .hero-content {
       position: relative;
-      max-width: 520px;
+      width: 60%;              /* 60% width on desktop */
       z-index: 1;
     }
     .hero h1 {
@@ -60,6 +60,7 @@
     .cta-buttons {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
     .btn {
       padding: 15px 32px;
@@ -181,7 +182,8 @@
         text-align: center;
       }
       .hero-content {
-        max-width: 90%;
+        width: 90%;          /* broader on small screens */
+        margin: 0 auto;
       }
     }
   </style>
@@ -204,21 +206,34 @@
     <h2 class="section-title">Menu Highlights</h2>
     <div class="menu-list">
       <div class="menu-card">
-        <span class="badge" style="display:none"></span>
-        <img src="mango tango.png" alt="Classic Dawg" />
-        <h3>Classic Dawg</h3>
-        <p>450 Ksh</p>
-      </div>
-      <div class="menu-card">
         <span class="badge">Bestseller</span>
         <img src="bbq dawg.png" alt="Nairobi Heat" />
         <h3>Nairobi Heat</h3>
         <p>500 Ksh</p>
       </div>
       <div class="menu-card">
-        <span class="badge" style="display:none"></span>
+        <img src="coconut curry dawg.png" alt="Classic Dawg" />
+        <h3>Coconut Curry Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+      <div class="menu-card">
+        <img src="mango tango.png" alt="Fries Loaded" />
+        <h3>Mango Tango Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+        <div class="menu-card">
+        <img src="peri peri crunch dawg.png" alt="Fries Loaded" />
+        <h3>Mango Tango Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+      <div class="menu-card">
         <img src="loaded fries.png" alt="Fries Loaded" />
-        <h3>Fries Loaded</h3>
+        <h3>Maranara Fries</h3>
+        <p>300 Ksh</p>
+      </div>
+      <div class="menu-card">
+        <img src="garlic fries.png" alt="Fries Loaded" />
+        <h3>Garlic Fries</h3>
         <p>300 Ksh</p>
       </div>
     </div>
