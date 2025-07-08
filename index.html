@@ -338,6 +338,16 @@
     font-size: 28px;
     cursor: pointer;
   }
+  .scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.scroll-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   </style>
 </head>
 
@@ -363,29 +373,29 @@
 
   <!-- MENU HIGHLIGHTS -->
 <section>
-  <h2 class="section-title">Menu Highlights </h2>
+  <h2 class="section-title scroll-fade">Menu Highlights </h2>
   <p class="section-title">Click to know more</p>
   <div class="menu-list">
-    <div class="menu-card" data-title="Bbq Beef Dawg" data-price="500 Ksh" data-image="bbq dawg.png" data-desc="Our #1 crowd favorite. A juicy beef sausage grilled to perfection, slathered in smoky BBQ sauce, and loaded with caramelized onions — the ultimate comfort hotdog for meat lovers in Nairobi."><span class="badge">Bestseller</span><img src="bbq dawg.png" alt="Bbq Beef Dawg" />
+    <div class="menu-card scroll-fade" data-title="Bbq Beef Dawg" data-price="500 Ksh" data-image="bbq dawg.png" data-desc="Our #1 crowd favorite. A juicy beef sausage grilled to perfection, slathered in smoky BBQ sauce, and loaded with caramelized onions — the ultimate comfort hotdog for meat lovers in Nairobi."><span class="badge">Bestseller</span><img src="bbq dawg.png" alt="Bbq Beef Dawg" />
       <h3>Bbq Choma Dawg</h3><p>500 Ksh</p>
     </div>
-    <div class="menu-card" data-title="Coconut Curry Dawg" data-price="450 Ksh" data-image="coconut curry dawg.png" data-desc="Experience a tropical twist with our Coconut Curry Dawg. Juicy chicken sausage topped with creamy coconut curry, fresh herbs, and tangy chutney—perfectly balanced and packed with Kenyan-inspired zest.">
+    <div class="menu-card scroll-fade" data-title="Coconut Curry Dawg" data-price="450 Ksh" data-image="coconut curry dawg.png" data-desc="Experience a tropical twist with our Coconut Curry Dawg. Juicy chicken sausage topped with creamy coconut curry, fresh herbs, and tangy chutney—perfectly balanced and packed with Kenyan-inspired zest.">
       <img src="coconut curry dawg.png" alt="Coconut Curry Dawg" />
       <h3>Coconut Curry Dawg</h3><p>450 Ksh</p>
     </div>
-    <div class="menu-card" data-title="Mango Tango Dawg" data-price="450 Ksh" data-image="mango tango.png" data-desc="Sweet meets heat in our Mango Tango Dawg. A tender beef sausage topped with our signature mango-chili glaze, pickled onions, and crunchy slaw. This dawg dances with every bite.">
+    <div class="menu-card scroll-fade" data-title="Mango Tango Dawg" data-price="450 Ksh" data-image="mango tango.png" data-desc="Sweet meets heat in our Mango Tango Dawg. A tender beef sausage topped with our signature mango-chili glaze, pickled onions, and crunchy slaw. This dawg dances with every bite.">
       <img src="mango tango.png" alt="Mango Tango Dawg" />
       <h3>Mango Tango Dawg</h3><p>450 Ksh</p>
     </div>
-    <div class="menu-card" data-title="Peri Peri Crunch Dawg" data-price="450 Ksh" data-image="peri peri crunch dawg.png" data-desc="Spice things up with the Peri Peri Crunch Dawg. Featuring a spicy peri-peri sauce, garlic aioli, and crispy onions over a grilled sausage—it’s fiery, crispy, and unforgettable.">
+    <div class="menu-card scroll-fade" data-title="Peri Peri Crunch Dawg" data-price="450 Ksh" data-image="peri peri crunch dawg.png" data-desc="Spice things up with the Peri Peri Crunch Dawg. Featuring a spicy peri-peri sauce, garlic aioli, and crispy onions over a grilled sausage—it’s fiery, crispy, and unforgettable.">
       <img src="peri peri crunch dawg.png" alt="Peri Peri Crunch Dawg" />
       <h3>Peri Peri Crunch Dawg</h3><p>450 Ksh</p>
     </div>
-    <div class="menu-card" data-title="Maranara Fries" data-price="300 Ksh" data-image="loaded fries.png" data-desc="Italian-inspired fries loaded with slow-cooked marinara, melted cheese, and a sprinkle of herbs. Our Maranara Fries are comfort food made for the streets of Nairobi.">
+    <div class="menu-card scroll-fade" data-title="Maranara Fries" data-price="300 Ksh" data-image="loaded fries.png" data-desc="Italian-inspired fries loaded with slow-cooked marinara, melted cheese, and a sprinkle of herbs. Our Maranara Fries are comfort food made for the streets of Nairobi.">
       <img src="loaded fries.png" alt="Maranara Fries" />
       <h3>Maranara Fries</h3><p>300 Ksh</p>
     </div>
-    <div class="menu-card" data-title="Garlic Fries" data-price="300 Ksh" data-image="garlic fries.png" data-desc="Golden, crispy fries tossed in roasted garlic butter and fresh parsley. Our Garlic Fries are bold, aromatic, and the perfect sidekick to any gourmet dawg.">
+    <div class="menu-card scroll-fade" data-title="Garlic Fries" data-price="300 Ksh" data-image="garlic fries.png" data-desc="Golden, crispy fries tossed in roasted garlic butter and fresh parsley. Our Garlic Fries are bold, aromatic, and the perfect sidekick to any gourmet dawg.">
       <img src="garlic fries.png" alt="Garlic Fries" />
       <h3>Garlic Fries</h3><p>300 Ksh</p>
     </div>
@@ -408,10 +418,10 @@
 
   <!-- ABOUT US -->
   <section>
-    <h2 class="section-title">About Us</h2>
+    <h2 class="section-title scroll-fade">About Us</h2>
     <div class="about-wrapper">
-      <img src="kula_kitchen.png" alt="Our Story" />
-      <div class="about-text">
+      <img class="scroll-fade" src="kula_kitchen.png" alt="Our Story" />
+      <div class="about-text scroll-fadescroll-fade">
         <p>Born from Nairobi’s vibrant street‑food culture, <strong>Kula Dawgs</strong> brings gourmet flair to the
           humble hotdog. We fuse locally sourced sausages with handcrafted toppings inspired by the city’s diverse
           flavors.</p>
@@ -424,17 +434,17 @@
 
   <!-- HOW IT WORKS -->
   <section>
-    <h2 class="section-title">How It Works</h2>
+    <h2 class="section-title scroll-fade">How It Works</h2>
     <div class="steps">
-      <div class="step">
+      <div class="step scroll-fade">
         <div class="icon">🌭</div>
         <p>Pick your dawg</p>
       </div>
-      <div class="step">
+      <div class="step scroll-fade">
         <div class="icon">📱</div>
         <p>Order on Glovo/Uber</p>
       </div>
-      <div class="step">
+      <div class="step scroll-fade">
         <div class="icon">⏱️</div>
         <p>Get it hot and fresh</p>
       </div>
@@ -442,8 +452,8 @@
   </section>
   <!-- CONTACT -->
   <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <form class="contact-form" action="mailto:info@kuladawgs.co.ke" method="post" enctype="text/plain">
+    <h2 class="section-title scroll-fade">Contact Us</h2>
+    <form class="contact-form scroll-fade" action="mailto:info@kuladawgs.co.ke" method="post" enctype="text/plain">
       <div class="input-group"><input type="text" name="name" placeholder="Your Name" required /></div>
       <div class="input-group"><input type="email" name="email" placeholder="Your Email" required /></div>
       <div class="input-group"><textarea name="message" rows="5" placeholder="Message" required></textarea></div>
@@ -453,11 +463,13 @@
 
   <!-- REVIEWS -->
   <section>
-    <h2 class="section-title">Reviews</h2>
-    <div class="reviews">
+    <h2 class="section-title scroll-fade">Reviews</h2>
+    <div class="reviews scroll-fade">
       <div class="review">⭐⭐⭐⭐⭐ “Tastiest hotdog in Nairobi!”</div>
       <div class="review">⭐⭐⭐⭐⭐ “The Bbq Dawg lives up to its name.”</div>
       <div class="review">⭐⭐⭐⭐⭐ “Quick delivery and super fresh.”</div>
+      <div class="review">⭐⭐⭐⭐⭐ “Can't believe how good these are”</div>
+
     </div>
   </section>
 

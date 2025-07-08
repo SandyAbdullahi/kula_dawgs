@@ -17,3 +17,16 @@ const modal = document.getElementById("menuModal");
 
   closeModal.onclick = () => { modal.style.display = "none"; };
   window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
