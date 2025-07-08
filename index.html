@@ -182,11 +182,29 @@
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 768px) {
-      .hero { flex-direction: column; justify-content: center; text-align: center; }
-      .hero-content { width: 90%; margin-bottom: 40px; }
-      .hero-logo { width: 60%; max-width: 300px; }
-      .about-wrapper { flex-direction: column; text-align: center; }
-      .about-wrapper img { width: 100%; max-width: 380px; }
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-content {
+        width: 90%;
+        margin: 60px 0 40px; /* extra top space */
+      }
+      .cta-buttons {
+        justify-content: center; /* center buttons */
+      }
+      .hero-logo {
+        display: none; /* hide logo on mobile */
+      }
+      .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-wrapper img {
+        width: 100%;
+        max-width: 380px;
+      }
     }
   </style>
 </head>
