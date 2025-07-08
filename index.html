@@ -29,6 +29,51 @@
       line-height: 1.6;
     }
 
+    /* Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #0d0d0d;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--yellow);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: var(--yellow);
+    }
+
+    /* Ensure page content isn't hidden behind navbar */
+    body {
+      scroll-padding-top: 80px;
+      scroll-behavior: smooth;
+    }
+
+
     /* HERO */
     .hero {
       position: relative;
@@ -37,6 +82,7 @@
       justify-content: space-between;
       min-height: 85vh;
       padding: 0 5%;
+      margin: 4% auto;
       background: url('hero-4.png')center/cover no-repeat;
     }
 
@@ -58,7 +104,7 @@
     }
 
     .hero h1 {
-   font-size: clamp(2.5rem, 6vw + 1rem, 5rem);
+      font-size: clamp(2.5rem, 6vw + 1rem, 5rem);
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 1rem;
@@ -66,7 +112,7 @@
     }
 
     .hero p {
-     font-size: clamp(1.1rem, 1.2vw + 0.5rem, 1.6rem);
+      font-size: clamp(1.1rem, 1.2vw + 0.5rem, 1.6rem);
       margin-bottom: 2rem;
     }
 
@@ -138,14 +184,16 @@
       position: relative;
       text-align: center;
       padding-bottom: 25px;
-        cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .menu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.15); /* yellow glow */
-}
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 204, 0, 0.15);
+      /* yellow glow */
+    }
+
     .menu-card img {
       width: 100%;
       height: 170px;
@@ -311,47 +359,64 @@
         width: 100%;
       }
     }
-    .modal {
-    position: fixed;
-    z-index: 99;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  .modal-content {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 16px;
-    max-width: 400px;
-    width: 100%;
-    color: #fff;
-    position: relative;
-  }
-  .modal .close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .scroll-fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.scroll-fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
+    .modal {
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 400px;
+      width: 100%;
+      color: #fff;
+      position: relative;
+    }
+
+    .modal .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .scroll-fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
 <body>
+  <nav class="navbar">
+    <div class="nav-logo">Kula Dawgs</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
@@ -367,57 +432,72 @@
       </div>
     </div>
     <div class="hero-logo">
-      <img src="logo.png" alt="Kula Dawgs Logo" />
+      <!-- <img src="logo.png" alt="Kula Dawgs Logo" /> -->
     </div>
   </header>
 
   <!-- MENU HIGHLIGHTS -->
-<section>
-  <h2 class="section-title scroll-fade">Menu Highlights </h2>
-  <p class="section-title">Click to know more</p>
-  <div class="menu-list">
-    <div class="menu-card scroll-fade" data-title="Bbq Beef Dawg" data-price="500 Ksh" data-image="bbq dawg.png" data-desc="Our #1 crowd favorite. A juicy beef sausage grilled to perfection, slathered in smoky BBQ sauce, and loaded with caramelized onions — the ultimate comfort hotdog for meat lovers in Nairobi."><span class="badge">Bestseller</span><img src="bbq dawg.png" alt="Bbq Beef Dawg" />
-      <h3>Bbq Choma Dawg</h3><p>500 Ksh</p>
+  <section id="menu">
+    <h2 class="section-title scroll-fade">Menu Highlights </h2>
+    <p class="section-title scroll-fade">Click to learn more</p>
+    <div class="menu-list">
+      <div class="menu-card scroll-fade" data-title="Bbq Beef Dawg" data-price="500 Ksh" data-image="bbq dawg.png"
+        data-desc="Our #1 crowd favorite. A juicy beef sausage grilled to perfection, slathered in smoky BBQ sauce, and loaded with caramelized onions — the ultimate comfort hotdog for meat lovers in Nairobi.">
+        <span class="badge">Bestseller</span><img src="bbq dawg.png" alt="Bbq Beef Dawg" />
+        <h3>Bbq Choma Dawg</h3>
+        <p>500 Ksh</p>
+      </div>
+      <div class="menu-card scroll-fade" data-title="Coconut Curry Dawg" data-price="450 Ksh"
+        data-image="coconut curry dawg.png"
+        data-desc="Experience a tropical twist with our Coconut Curry Dawg. Juicy chicken sausage topped with creamy coconut curry, fresh herbs, and tangy chutney—perfectly balanced and packed with Kenyan-inspired zest.">
+        <img src="coconut curry dawg.png" alt="Coconut Curry Dawg" />
+        <h3>Coconut Curry Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+      <div class="menu-card scroll-fade" data-title="Mango Tango Dawg" data-price="450 Ksh" data-image="mango tango.png"
+        data-desc="Sweet meets heat in our Mango Tango Dawg. A tender beef sausage topped with our signature mango-chili glaze, pickled onions, and crunchy slaw. This dawg dances with every bite.">
+        <img src="mango tango.png" alt="Mango Tango Dawg" />
+        <h3>Mango Tango Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+      <div class="menu-card scroll-fade" data-title="Peri Peri Crunch Dawg" data-price="450 Ksh"
+        data-image="peri peri crunch dawg.png"
+        data-desc="Spice things up with the Peri Peri Crunch Dawg. Featuring a spicy peri-peri sauce, garlic aioli, and crispy onions over a grilled sausage—it’s fiery, crispy, and unforgettable.">
+        <img src="peri peri crunch dawg.png" alt="Peri Peri Crunch Dawg" />
+        <h3>Peri Peri Crunch Dawg</h3>
+        <p>450 Ksh</p>
+      </div>
+      <div class="menu-card scroll-fade" data-title="Maranara Fries" data-price="300 Ksh" data-image="loaded fries.png"
+        data-desc="Italian-inspired fries loaded with slow-cooked marinara, melted cheese, and a sprinkle of herbs. Our Maranara Fries are comfort food made for the streets of Nairobi.">
+        <img src="loaded fries.png" alt="Maranara Fries" />
+        <h3>Maranara Fries</h3>
+        <p>300 Ksh</p>
+      </div>
+      <div class="menu-card scroll-fade" data-title="Garlic Fries" data-price="300 Ksh" data-image="garlic fries.png"
+        data-desc="Golden, crispy fries tossed in roasted garlic butter and fresh parsley. Our Garlic Fries are bold, aromatic, and the perfect sidekick to any gourmet dawg.">
+        <img src="garlic fries.png" alt="Garlic Fries" />
+        <h3>Garlic Fries</h3>
+        <p>300 Ksh</p>
+      </div>
     </div>
-    <div class="menu-card scroll-fade" data-title="Coconut Curry Dawg" data-price="450 Ksh" data-image="coconut curry dawg.png" data-desc="Experience a tropical twist with our Coconut Curry Dawg. Juicy chicken sausage topped with creamy coconut curry, fresh herbs, and tangy chutney—perfectly balanced and packed with Kenyan-inspired zest.">
-      <img src="coconut curry dawg.png" alt="Coconut Curry Dawg" />
-      <h3>Coconut Curry Dawg</h3><p>450 Ksh</p>
-    </div>
-    <div class="menu-card scroll-fade" data-title="Mango Tango Dawg" data-price="450 Ksh" data-image="mango tango.png" data-desc="Sweet meets heat in our Mango Tango Dawg. A tender beef sausage topped with our signature mango-chili glaze, pickled onions, and crunchy slaw. This dawg dances with every bite.">
-      <img src="mango tango.png" alt="Mango Tango Dawg" />
-      <h3>Mango Tango Dawg</h3><p>450 Ksh</p>
-    </div>
-    <div class="menu-card scroll-fade" data-title="Peri Peri Crunch Dawg" data-price="450 Ksh" data-image="peri peri crunch dawg.png" data-desc="Spice things up with the Peri Peri Crunch Dawg. Featuring a spicy peri-peri sauce, garlic aioli, and crispy onions over a grilled sausage—it’s fiery, crispy, and unforgettable.">
-      <img src="peri peri crunch dawg.png" alt="Peri Peri Crunch Dawg" />
-      <h3>Peri Peri Crunch Dawg</h3><p>450 Ksh</p>
-    </div>
-    <div class="menu-card scroll-fade" data-title="Maranara Fries" data-price="300 Ksh" data-image="loaded fries.png" data-desc="Italian-inspired fries loaded with slow-cooked marinara, melted cheese, and a sprinkle of herbs. Our Maranara Fries are comfort food made for the streets of Nairobi.">
-      <img src="loaded fries.png" alt="Maranara Fries" />
-      <h3>Maranara Fries</h3><p>300 Ksh</p>
-    </div>
-    <div class="menu-card scroll-fade" data-title="Garlic Fries" data-price="300 Ksh" data-image="garlic fries.png" data-desc="Golden, crispy fries tossed in roasted garlic butter and fresh parsley. Our Garlic Fries are bold, aromatic, and the perfect sidekick to any gourmet dawg.">
-      <img src="garlic fries.png" alt="Garlic Fries" />
-      <h3>Garlic Fries</h3><p>300 Ksh</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- MODAL -->
-<div id="menuModal" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img id="modalImage" src="" alt="" style="width:100%; max-height:200px; object-fit:cover; border-radius:10px;" />
-    <h3 id="modalTitle" style="margin-top:20px;"></h3>
-    <p id="modalDesc"></p>
-    <p id="modalPrice" style="font-weight: bold;"></p>
-    <a href="https://glovoapp.com/en/ke" target="_blank">
-      <button class="btn glovo" style="margin-top:15px;">Order Now</button>
-    </a>
+  <!-- MODAL -->
+  <div id="menuModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="" style="width:100%; max-height:200px; object-fit:cover; border-radius:10px;" />
+      <h3 id="modalTitle" style="margin-top:20px;"></h3>
+      <p id="modalDesc"></p>
+      <p id="modalPrice" style="font-weight: bold;"></p>
+      <a href="https://glovoapp.com/en/ke" target="_blank">
+        <button class="btn glovo" style="margin-top:15px;">Order Now</button>
+      </a>
+    </div>
   </div>
-</div>
 
   <!-- ABOUT US -->
-  <section>
+  <section id="about">
     <h2 class="section-title scroll-fade">About Us</h2>
     <div class="about-wrapper">
       <img class="scroll-fade" src="kula_kitchen.png" alt="Our Story" />
@@ -433,7 +513,7 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section>
+  <section id="how-it-works">
     <h2 class="section-title scroll-fade">How It Works</h2>
     <div class="steps">
       <div class="step scroll-fade">
@@ -462,13 +542,13 @@
   </section>
 
   <!-- REVIEWS -->
-  <section>
+  <section id="reviews">
     <h2 class="section-title scroll-fade">Reviews</h2>
-    <div class="reviews scroll-fade">
-      <div class="review">⭐⭐⭐⭐⭐ “Tastiest hotdog in Nairobi!”</div>
-      <div class="review">⭐⭐⭐⭐⭐ “The Bbq Dawg lives up to its name.”</div>
-      <div class="review">⭐⭐⭐⭐⭐ “Quick delivery and super fresh.”</div>
-      <div class="review">⭐⭐⭐⭐⭐ “Can't believe how good these are”</div>
+    <div class="reviews">
+      <div class="review scroll-fade">⭐⭐⭐⭐⭐ “Tastiest hotdog in Nairobi!”</div>
+      <div class="review scroll-fade">⭐⭐⭐⭐⭐ “The Bbq Dawg lives up to its name.”</div>
+      <div class="review scroll-fade">⭐⭐⭐⭐⭐ “Quick delivery and super fresh.”</div>
+      <div class="review scroll-fade">⭐⭐⭐⭐⭐ “Can't believe how good these are”</div>
 
     </div>
   </section>
@@ -478,5 +558,6 @@
   <footer>© 2025 Kula Dawgs. Delivering exclusively via Glovo and Uber Eats.</footer>
 </body>
 
- <script src="scripts.js"></script>
+<script src="scripts.js"></script>
+
 </html>
