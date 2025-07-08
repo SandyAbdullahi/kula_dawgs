@@ -108,7 +108,7 @@
      min-height: 85vh;
      padding: 0 5%;
      margin: 4% auto;
-     background: url('hero-4.png')center/cover no-repeat;
+     background: url('images/hero-4.png')center/cover no-repeat;
  }
 
  .hero::after {
