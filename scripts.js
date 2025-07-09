@@ -43,3 +43,23 @@ threshold: 0.1
 
 document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
 
+window.addEventListener("load", () => {
+const popup = document.getElementById("promoPopup");
+const close = document.getElementById("popupClose");
+
+// Show popup after 1.5 seconds
+setTimeout(() => {
+    popup.style.display = "flex";
+}, 1500);
+
+close.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+
+// Optional: close on outside click
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+    popup.style.display = "none";
+    }
+});
+});
