@@ -16,12 +16,30 @@
      background: var(--bg);
      color: #fff;
      line-height: 1.6;
+       scroll-padding-top: 120px; /* promo bar + navbar height */
  }
+
+.promo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: var(--yellow);
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 2vw + 0.2rem, 1rem);
+}
+
+
 
  /* Navbar Styles */
  .navbar {
      position: fixed;
-     top: 0;
+      top: 40px; /* adjust based on promo bar height */
+  z-index: 1000;
      left: 0;
      right: 0;
      background: #0d0d0d;
@@ -29,7 +47,7 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     z-index: 1001;
+  
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
  }
 
@@ -427,3 +445,4 @@
      opacity: 1;
      transform: translateY(0);
  }
+
